@@ -26,13 +26,13 @@ void print(vector<vector<int>> &arr,int m ,int n){
     }
 }
 vector<vector<int>> to2D(vector<int> &arr,int m,int n){
-    vector<vector<int>> matrix;
+    
     int size = arr.size();
 
     if(size == 0 || is_prime(size)){
-        return matrix;
+        return {};
     }
-    matrix.resize(m, vector<int>(n));
+    vector<vector<int>> matrix(m, vector<int>(n));
         
         
     int idx = 0;
