@@ -3,20 +3,6 @@
 #include<math.h>
 using namespace std;
 
-bool is_prime(int num){
-    
-    if(num <= 1){
-        return false;
-    }
-
-    for (int i = 2; i <= sqrt(num); i++){
-        if(num % i == 0){
-            return false;
-        }
-    }
-    return true;
-}
-
 void print(vector<vector<int>> &arr,int m ,int n){
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
@@ -26,13 +12,13 @@ void print(vector<vector<int>> &arr,int m ,int n){
     }
 }
 vector<vector<int>> to2D(vector<int> &arr,int m,int n){
-    vector<vector<int>> matrix;
+  
     int size = arr.size();
 
-    if(size == 0 || is_prime(size)){
-        return matrix;
+    if(size == 0 || m*n != size){
+        return {};
     }
-    matrix.resize(m, vector<int>(n));
+    vector<vector<int>>matrix(m, vector<int>(n));
         
         
     int idx = 0;
