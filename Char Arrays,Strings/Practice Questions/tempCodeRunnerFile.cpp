@@ -1,0 +1,1 @@
+ cout << is_palindrome(str);
