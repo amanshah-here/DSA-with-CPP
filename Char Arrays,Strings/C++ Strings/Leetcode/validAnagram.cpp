@@ -32,5 +32,5 @@ int main() {
     string str2="nagaram";
 
     cout << validAnagram(str1, str2);
-    return 0;
+    return ;
 }
