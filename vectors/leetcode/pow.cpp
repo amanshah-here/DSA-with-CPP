@@ -40,7 +40,7 @@ double power(long x,int n)
 int main(){
 
     long x = 3;
-    int n = 5;
+    int n = 2;
 
     cout << x << " to the power " << n << " : " << power(x, n) << endl;
     return 0;

@@ -1,2 +1,0 @@
-
-void oddOrEven(int n) {
