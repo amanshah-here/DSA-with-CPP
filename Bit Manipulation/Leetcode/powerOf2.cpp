@@ -2,8 +2,7 @@
 using namespace std;
 
 bool powerOf2(int num) {
-    if (!(num & (num - 1))) { //the and of a power of 2 and its previous number is zero
-
+    if (!(num & (num-1))) {
         return true;
     }
     else {
