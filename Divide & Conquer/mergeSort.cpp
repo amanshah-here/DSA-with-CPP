@@ -51,8 +51,8 @@ void print(vector<int>& arr) {  //a utility function to print the array.
 int main() {
     vector<int> arr = { 6,3,7,5,2,4 };
     int st = 0;
-    int end = arr.size() - 1;
+    int end = arr.size() - 1; 
     mergeSort(arr, st, end);
     print(arr);
     return 0;
-}
+} 
