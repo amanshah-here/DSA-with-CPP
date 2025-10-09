@@ -31,10 +31,10 @@ bool isSafe(vector<vector<char>>& board, int row, int  col) {
     }
 
     //Diagonal Left Safety Check
-    for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) { 
-            if (board[i][j] == 'Q') {
-                return false;
-            }
+    for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+        if (board[i][j] == 'Q') {
+            return false;
+        }
     }
 
     //Digonal Right Safety Check
@@ -47,21 +47,22 @@ bool isSafe(vector<vector<char>>& board, int row, int  col) {
     return true;
 }
 
-void nQueens(vector<vector<char>>& board, int row) {
+bool nQueens(vector<vector<char>>& board, int row) {
     int n = board.size();
 
     if (row == n) { //base case
         printBoard(board);
-        return;
+        return true;
     }
 
     for (int j = 0; j < n; j++) {   // looping on the columns to traverse each column.
         if (isSafe(board, row, j)) {
             board[row][j] = 'Q';    //placing Queen
-            nQueens(board, row + 1);    //recursive call for next row.
+            if(nQueens(board, row + 1)) return true;    //recursive call for next row.
             board[row][j] = '.';    //backtrack
         }
-        }
+    }
+    return false;
 }
 int main() {
     vector<vector<char>> board;
