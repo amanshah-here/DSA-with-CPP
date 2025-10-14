@@ -103,7 +103,6 @@ public:
         Node* temp = head;
         while (temp->next != tail) {
             temp = temp->next;
-            // cout << temp->data << endl;
         }
         delete tail;
         tail = temp;
