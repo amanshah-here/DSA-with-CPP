@@ -23,6 +23,7 @@ public:
             s2.pop();
         }
     }
+    
 
     //* Remove element from the front
     void dequeue() {
