@@ -1,1 +1,0 @@
-maxWater = max(maxWater, currWater);
